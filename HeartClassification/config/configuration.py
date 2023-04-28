@@ -16,6 +16,8 @@ class Configuration:
         
     #Data Ingestion 
     def get_data_ingestion_config(self)->DataIngestionConfig:
+        
+        logging.info('*'*15,'Data ingestion started','*'*15)
         try:
             data_ingestion_info = self.config_info[DATA_INGESTION_CONFIG_KEY] 
             artifact_dir = self.training_pipeline_config.artifact_dir 
@@ -56,6 +58,7 @@ class Configuration:
                 ingested_train_dir=ingested_train_dir,
                 ingested_test_dir=ingested_test_dir
             )
+            logging.info("*"*15,f"Data ingestion Config completed: {data_ingestion_config}","*"*15)
             return data_ingestion_config 
         except Exception as e:
             raise HeartException(e,sys) from e 
