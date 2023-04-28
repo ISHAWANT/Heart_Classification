@@ -4,7 +4,7 @@ training_pipeline_config:
 
 data_ingestion_config:
   dataset_download_url: "URL"
-  raw_download_dir: zip_data
+  rar_download_dir: zip_data
   raw_data_dir: raw_data
   ingested_dir: ingested_data 
   ingested_train_dir: train
