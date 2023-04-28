@@ -4,7 +4,7 @@ import os,sys
 # from HeartClassification.config.start_spark_session import spark_session 
 import dill 
 
-def read_yaml(file_path:str):
+def read_yaml_file(file_path:str):
     """
     Reads a yaml file and returns the contents as dictionary.
     """
